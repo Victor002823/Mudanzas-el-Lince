@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html class="light" lang="es"><head>
     
@@ -94,7 +94,7 @@
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-xl">
 <!-- Form Section -->
 <div class="lg:col-span-8 bg-white p-lg border border-outline-variant shadow-sm rounded-lg">
-<form action="#" class="space-y-lg">
+            <form id="contactForm" action="#" class="space-y-lg">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
 <div class="space-y-xs">
 <label class="font-label-caps text-on-surface-variant block">Nombre Completo</label>
@@ -209,6 +209,16 @@
     </div>
 
     <script>
+        // Form submission handling (Disabled fetch)
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('¡Gracias! Tu mensaje ha sido recibido (Simulación). El formulario está temporalmente en modo de prueba hasta que se conecte el servidor.');
+                contactForm.reset();
+            });
+        }
+
         // Back to top button logic
         window.addEventListener('scroll', () => {
             const btn = document.getElementById('backToTopBtn');
