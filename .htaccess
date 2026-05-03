@@ -1,0 +1,15 @@
+RewriteEngine On
+
+# 1. Redirigir de .html a la URL limpia (ej. contacto.html -> /contacto)
+# Esto evita contenido duplicado y mejora el SEO
+RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
+RewriteRule ^ /%1 [L,R=301]
+
+# 2. Servir el archivo .html internamente si la URL no tiene extensión
+# Ej. si alguien visita /contacto, el servidor busca contacto.html
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [L]
+
+# 3. Opcional: Redirigir index.html a la raíz /
+RewriteRule ^index$ / [L,R=301]
