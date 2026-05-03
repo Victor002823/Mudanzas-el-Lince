@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es" class="light">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aviso de Privacidad | Fletes y Mudanzas El Lince</title>
+    <meta name="description" content="Conoce nuestro aviso de privacidad. En Fletes y Mudanzas El Lince protegemos tus datos personales conforme a la ley."/>
+    <meta name="keywords" content="aviso de privacidad, fletes y mudanzas el lince, protección de datos mudanzas"/>
+    <meta name="author" content="Fletes y Mudanzas El Lince"/>
+    <!-- Open Graph / Redes Sociales -->
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Aviso de Privacidad | Fletes y Mudanzas El Lince"/>
+    <meta property="og:description" content="Políticas de protección de datos y aviso de privacidad de Fletes y Mudanzas El Lince."/>
+    <meta property="og:image" content="./assets/logo.png"/>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./assets/logo.png"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+              "primary-container": "#1d3a8a",
+              "on-primary-container": "#8fa8ff",
+              "primary": "#00236e",
+              "on-primary": "#ffffff",
+              "surface": "#faf8ff",
+              "on-surface": "#1a1b21",
+              "surface-container-low": "#f4f3fa",
+              "outline-variant": "#c5c5d3",
+              "on-surface-variant": "#444651"
+            },
+            "fontFamily": {
+              "h1": ["Inter"],
+              "h2": ["Inter"],
+              "h3": ["Inter"],
+              "body-lg": ["Inter"],
+              "body-md": ["Inter"],
+              "label-caps": ["Inter"]
+            },
+            "fontSize": {
+              "h1": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+              "h2": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+              "h3": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+              "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+              "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+              "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}]
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body-md text-on-surface antialiased">
+    <!-- TopNavBar -->
+    <header class="bg-white dark:bg-slate-900 border-b border-gray-200 dark:border-gray-800 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto flex justify-between items-center py-4 px-8">
+            <!-- Logo -->
+            <a href="./index.html" class="flex items-center">
+                <img src="./assets/logo.png" alt="Fletes y Mudanzas el Lince" class="h-16 md:h-20 w-auto object-contain transition-transform hover:scale-105" />
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center gap-8">
+                <a class="font-['Inter'] text-sm tracking-tight text-gray-600 dark:text-gray-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200" href="./index.html">Inicio</a>
+                <a class="font-['Inter'] text-sm tracking-tight text-gray-600 dark:text-gray-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200" href="./nosotros.html">Nosotros</a>
+                <a class="font-['Inter'] text-sm tracking-tight text-gray-600 dark:text-gray-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200" href="./servicios.html">Servicios</a>
+                <a class="font-['Inter'] text-sm tracking-tight text-gray-600 dark:text-gray-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200" href="./contacto.html">Contacto</a>
+            </nav>
+
+            <!-- Desktop CTA -->
+            <button onclick="window.location.href='./contacto.html'" class="hidden md:block bg-primary text-on-primary px-6 h-[48px] font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-lg rounded-lg">
+                Cotizar
+            </button>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobileMenuBtn" class="md:hidden text-primary p-2 hover:bg-surface-container rounded-lg transition-colors">
+                <span class="material-symbols-outlined text-3xl">menu</span>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobileMenu" class="hidden md:hidden absolute top-full left-0 w-full bg-white dark:bg-slate-900 border-t border-gray-200 dark:border-gray-800 shadow-xl flex flex-col items-center py-6 gap-2">
+            <a class="font-['Inter'] text-lg font-medium text-gray-600 w-full text-center py-3 hover:bg-gray-50" href="./index.html">Inicio</a>
+            <a class="font-['Inter'] text-lg font-medium text-gray-600 w-full text-center py-3 hover:bg-gray-50" href="./nosotros.html">Nosotros</a>
+            <a class="font-['Inter'] text-lg font-medium text-gray-600 w-full text-center py-3 hover:bg-gray-50" href="./servicios.html">Servicios</a>
+            <a class="font-['Inter'] text-lg font-medium text-gray-600 w-full text-center py-3 hover:bg-gray-50" href="./contacto.html">Contacto</a>
+            <button onclick="window.location.href='./contacto.html'" class="bg-primary text-on-primary w-3/4 h-[48px] font-semibold transition-all duration-300 rounded-lg shadow-md mt-4">
+                Cotizar
+            </button>
+        </div>
+    </header>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.getElementById('mobileMenuBtn');
+            const menu = document.getElementById('mobileMenu');
+            if(btn && menu) {
+                btn.addEventListener('click', () => {
+                    menu.classList.toggle('hidden');
+                });
+            }
+        });
+    </script>
+
+    <!-- Page Header -->
+    <section class="bg-primary-container text-white py-20 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+        <div class="max-w-7xl mx-auto px-8 text-center relative z-10">
+            <h1 class="font-h1 text-4xl md:text-5xl mb-4">Aviso de Privacidad</h1>
+            <p class="font-body-lg text-blue-200 max-w-2xl mx-auto">Su confianza es lo más importante. Conozca cómo protegemos y manejamos su información personal.</p>
+        </div>
+    </section>
+
+    <!-- Content -->
+    <main class="max-w-4xl mx-auto px-6 py-16 space-y-8">
+        
+        <!-- Card 1 -->
+        <div class="bg-white p-8 md:p-10 border border-outline-variant rounded-xl shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group">
+            <div class="flex items-center gap-4 mb-6">
+                <div class="bg-primary-container/10 p-3 rounded-lg text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                    <span class="material-symbols-outlined text-3xl">badge</span>
+                </div>
+                <h2 class="font-h2 text-2xl md:text-3xl text-primary m-0">1. Identidad y Domicilio</h2>
+            </div>
+            <p class="text-on-surface-variant leading-relaxed text-lg">
+                <strong>Fletes y Mudanzas el Lince</strong>, con domicilio en Ciudad de México, es responsable del uso y protección de sus datos personales, y al respecto le informamos lo siguiente:
+            </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-white p-8 md:p-10 border border-outline-variant rounded-xl shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group">
+            <div class="flex items-center gap-4 mb-6">
+                <div class="bg-primary-container/10 p-3 rounded-lg text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                    <span class="material-symbols-outlined text-3xl">fact_check</span>
+                </div>
+                <h2 class="font-h2 text-2xl md:text-3xl text-primary m-0">2. Fines de los Datos Personales</h2>
+            </div>
+            <p class="text-on-surface-variant leading-relaxed text-lg mb-4">
+                Los datos personales que recabamos de usted, los utilizaremos para las siguientes finalidades que son necesarias para el servicio que solicita:
+            </p>
+            <ul class="space-y-3">
+                <li class="flex items-start gap-3 text-on-surface-variant text-lg">
+                    <span class="material-symbols-outlined text-primary mt-1 text-xl">check_circle</span>
+                    Cotización y logística de servicios de mudanza y fletes.
+                </li>
+                <li class="flex items-start gap-3 text-on-surface-variant text-lg">
+                    <span class="material-symbols-outlined text-primary mt-1 text-xl">check_circle</span>
+                    Atención al cliente y seguimiento de servicios.
+                </li>
+                <li class="flex items-start gap-3 text-on-surface-variant text-lg">
+                    <span class="material-symbols-outlined text-primary mt-1 text-xl">check_circle</span>
+                    Facturación y cobro.
+                </li>
+                <li class="flex items-start gap-3 text-on-surface-variant text-lg">
+                    <span class="material-symbols-outlined text-primary mt-1 text-xl">check_circle</span>
+                    Fines estadísticos y mejora de la calidad de nuestro servicio.
+                </li>
+            </ul>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-white p-8 md:p-10 border border-outline-variant rounded-xl shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group">
+            <div class="flex items-center gap-4 mb-6">
+                <div class="bg-primary-container/10 p-3 rounded-lg text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                    <span class="material-symbols-outlined text-3xl">description</span>
+                </div>
+                <h2 class="font-h2 text-2xl md:text-3xl text-primary m-0">3. Datos Recabados</h2>
+            </div>
+            <p class="text-on-surface-variant leading-relaxed text-lg">
+                Para llevar a cabo las finalidades descritas, utilizaremos los siguientes datos personales: nombre completo, teléfono, correo electrónico, dirección de origen, dirección de destino, y detalles del inventario a trasladar.
+            </p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="bg-white p-8 md:p-10 border border-outline-variant rounded-xl shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group">
+            <div class="flex items-center gap-4 mb-6">
+                <div class="bg-primary-container/10 p-3 rounded-lg text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                    <span class="material-symbols-outlined text-3xl">admin_panel_settings</span>
+                </div>
+                <h2 class="font-h2 text-2xl md:text-3xl text-primary m-0">4. Ejercicio de Derechos ARCO</h2>
+            </div>
+            <p class="text-on-surface-variant leading-relaxed text-lg">
+                Usted tiene derecho a conocer qué datos personales tenemos de usted, para qué los utilizamos y las condiciones del uso que les damos (Acceso). Asimismo, es su derecho solicitar la corrección de su información personal (Rectificación); que la eliminemos de nuestros registros (Cancelación); así como oponerse al uso de sus datos personales para fines específicos (Oposición). Estos derechos se conocen como derechos ARCO. Para ejercerlos, por favor contacte a nuestro equipo a través del formulario de contacto en nuestro sitio web.
+            </p>
+        </div>
+        
+        <div class="text-center pt-8">
+            <p class="text-sm text-gray-500 bg-gray-100 inline-block px-4 py-2 rounded-full">Última actualización: Mayo 2024</p>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200">
+        <div class="flex flex-col md:flex-row justify-between items-center py-12 px-8 max-w-7xl mx-auto gap-4">
+            <div class="flex items-center">
+                <a href="./index.html"><img src="./assets/logo.png" alt="Fletes y Mudanzas el Lince" class="h-16 w-auto object-contain transition-transform hover:scale-105" /></a>
+            </div>
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="./privacidad.html" class="font-['Inter'] text-xs font-medium text-gray-500 hover:underline decoration-blue-900 transition-opacity duration-200">Aviso de Privacidad</a>
+                <a href="./terminos.html" class="font-['Inter'] text-xs font-medium text-gray-500 hover:underline decoration-blue-900 transition-opacity duration-200">Términos y Condiciones</a>
+                <a href="tel:+525563285207" class="font-['Inter'] text-xs font-medium text-blue-900 font-bold hover:underline">Tel: 5563285207</a>
+            </div>
+            <div class="font-['Inter'] text-xs font-medium text-gray-500">
+                © 2024 Fletes y Mudanzas el Lince. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+    <!-- Floating Buttons -->
+    <div class="fixed bottom-6 right-6 flex flex-col gap-4 z-50">
+        <!-- WhatsApp Button -->
+        <a href="https://wa.me/525563285207" target="_blank" class="bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-[#20bd5a] hover:-translate-y-1 transition-all duration-300 group relative">
+            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+            <span class="absolute right-16 bg-white text-gray-800 text-xs font-bold px-3 py-2 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap">
+                WhatsApp
+            </span>
+        </a>
+        <!-- Back to Top Button -->
+        <button id="backToTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="opacity-0 translate-y-10 bg-primary text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-primary-container hover:text-primary transition-all duration-300 pointer-events-none">
+            <span class="material-symbols-outlined">arrow_upward</span>
+        </button>
+    </div>
+
+    <script>
+        // Back to top button logic
+        window.addEventListener('scroll', () => {
+            const btn = document.getElementById('backToTopBtn');
+            if (window.scrollY > 300) {
+                btn.classList.remove('opacity-0', 'translate-y-10', 'pointer-events-none');
+                btn.classList.add('opacity-100', 'translate-y-0');
+            } else {
+                btn.classList.add('opacity-0', 'translate-y-10', 'pointer-events-none');
+                btn.classList.remove('opacity-100', 'translate-y-0');
+            }
+        });
+    </script>
+</body>
+</html>
