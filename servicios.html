@@ -1,246 +1,294 @@
-﻿<!DOCTYPE html>
-
-<html class="light" lang="es"><head>
-    
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!DOCTYPE html>
+<html class="light" lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/style.min.css">
 
-<title>Catálogo de Servicios | Fletes y mudanzas El Lince</title>
-<meta name="description" content="Conoce nuestro Catálogo de servicios: mudanzas de hogar, mudanzas corporativas, fletes foráneos y servicio de empaque y embalaje profesional."/>
-<meta name="keywords" content="servicios de mudanza, Catálogo de mudanzas, fletes foráneos, empaque profesional, mudanza corporativa, mudanza residencial"/>
-<meta name="author" content="Fletes y mudanzas El Lince"/>
-<!-- Open Graph / Redes Sociales -->
-<meta property="og:type" content="website"/>
-<meta property="og:title" content="Servicios Especializados | Fletes y mudanzas El Lince"/>
-<meta property="og:description" content="Expertos en soluciones de traslados y mudanzas para el hogar y negocio. Empaque profesional y Garantía de seguridad."/>
-<meta property="og:image" content="./assets/logo.png"/>
-<!-- Favicon -->
-<link rel="icon" type="image/png" href="./assets/logo.png"/>
+    <title>Servicios de Mudanzas y Fletes | Fletes y Mudanzas El Lince</title>
+    <meta name="description" content="Conoce nuestro catálogo completo: mudanzas residenciales, corporativas, fletes foráneos y servicio de empaque profesional con garantía de seguridad."/>
+    <meta name="keywords" content="servicios de mudanza, fletes, empaque profesional, mudanza corporativa, mudanza residencial, fletes cdmx"/>
+    <meta name="author" content="Fletes y Mudanzas El Lince"/>
+    
+    <link rel="canonical" href="https://mudanzasellince.com/servicios">
+    <meta name="theme-color" content="#0f172a">
+    <meta name="robots" content="index, follow">
 
+    <!-- Open Graph -->
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Servicios Especializados | Fletes y Mudanzas El Lince"/>
+    <meta property="og:description" content="Expertos en soluciones de traslados y mudanzas para el hogar y negocio. Empaque profesional y garantía de seguridad."/>
+    <meta property="og:image" content="https://mudanzasellince.com/assets/logo.webp"/>
+    <meta property="og:url" content="https://mudanzasellince.com/servicios"/>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./assets/logo.webp"/>
+    <script type="application/ld+json">
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://mudanzasellince.com/index"
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Servicios",
+          "item": "https://mudanzasellince.com/servicios"
+        }]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Mudanzas y Fletes",
+        "provider": {
+          "@type": "MovingCompany",
+          "name": "Fletes y Mudanzas El Lince"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "Mexico"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Catálogo de Mudanzas",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Mudanzas Residenciales"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Mudanzas Corporativas"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Empaque y Embalaje"
+              }
+            }
+          ]
+        }
+      }
+    ]
+    </script>
 </head>
-<body class="font-body-md antialiased">
-<!-- Header (TopNavBar) -->
+<body class="bg-surface font-body-md text-on-surface antialiased">
+
 <header class="bg-white dark:bg-slate-900 border-b border-gray-200 dark:border-gray-800 sticky top-0 z-50">
     <div class="max-w-7xl mx-auto flex justify-between items-center py-4 px-8">
-        <!-- Logo -->
-        <a href="./index.html" class="flex items-center">
-            <img src="./assets/logo.png" alt="Fletes y mudanzas el Lince" class="h-12 md:h-14 w-auto object-contain transition-transform hover:scale-105" />
+        <a href="./index" class="flex items-center">
+            <img src="./assets/logo.webp" alt="Fletes y Mudanzas El Lince" width="160" height="56" class="company-logo h-12 md:h-14 w-auto object-contain transition-transform hover:scale-105" />
         </a>
 
-        <!-- Desktop Navigation -->
         <nav class="hidden md:flex items-center gap-8">
-            <a class="font-['Inter'] text-sm tracking-tight text-gray-600 dark:text-gray-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200" href="./index.html">Inicio</a>
-            <a class="font-['Inter'] text-sm tracking-tight text-gray-600 dark:text-gray-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200" href="./nosotros.html">Nosotros</a>
-            <a class="font-['Inter'] text-sm tracking-tight text-blue-900 dark:text-blue-400 border-b-2 border-blue-900 dark:border-blue-400 pb-1" href="./servicios.html">Servicios</a>
-            <a class="font-['Inter'] text-sm tracking-tight text-gray-600 dark:text-gray-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200" href="./contacto.html">contacto</a>
+            <a class="font-['Inter'] text-sm tracking-tight text-gray-600 dark:text-gray-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200" href="./index">Inicio</a>
+            <a class="font-['Inter'] text-sm tracking-tight text-gray-600 dark:text-gray-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200" href="./nosotros">Nosotros</a>
+            <a class="font-['Inter'] text-sm tracking-tight text-blue-900 dark:text-blue-400 border-b-2 border-blue-900 dark:border-blue-400 pb-1" href="./servicios">Servicios</a>
+            <a class="font-['Inter'] text-sm tracking-tight text-gray-600 dark:text-gray-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200" href="./contacto">Contacto</a>
         </nav>
 
-        <!-- Desktop CTA -->
-        <button onclick="window.location.href='./contacto.html'" class="hidden md:block bg-primary text-on-primary px-6 h-[48px] font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-lg rounded-lg">
+        <button onclick="window.location.href='./contacto'" class="hidden md:block bg-primary text-on-primary px-6 h-[48px] font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-lg rounded-lg">
             Cotizar
         </button>
 
-        <!-- Mobile Menu Button -->
-        <button id="mobileMenuBtn" class="md:hidden text-primary p-2 hover:bg-surface-container rounded-lg transition-colors">
+        <button id="mobileMenuBtn" class="md:hidden text-primary p-2 hover:bg-surface-container rounded-lg transition-colors" aria-label="Abrir menú móvil">
             <span class="material-symbols-outlined text-3xl">menu</span>
         </button>
     </div>
 
-    <!-- Mobile Menu Dropdown -->
     <div id="mobileMenu" class="hidden md:hidden absolute top-full left-0 w-full bg-white dark:bg-slate-900 border-t border-gray-200 dark:border-gray-800 shadow-xl flex flex-col items-center py-6 gap-2">
-        <a class="font-['Inter'] text-lg font-medium text-gray-600 w-full text-center py-3 hover:bg-gray-50" href="./index.html">Inicio</a>
-        <a class="font-['Inter'] text-lg font-medium text-gray-600 w-full text-center py-3 hover:bg-gray-50" href="./nosotros.html">Nosotros</a>
-        <a class="font-['Inter'] text-lg font-bold text-primary bg-primary/5 w-full text-center py-3" href="./servicios.html">Servicios</a>
-        <a class="font-['Inter'] text-lg font-medium text-gray-600 w-full text-center py-3 hover:bg-gray-50" href="./contacto.html">contacto</a>
-        <button onclick="window.location.href='./contacto.html'" class="bg-primary text-on-primary w-3/4 h-[48px] font-semibold transition-all duration-300 rounded-lg shadow-md mt-4">
+        <a class="font-['Inter'] text-lg font-medium text-gray-600 w-full text-center py-3 hover:bg-gray-50" href="./index">Inicio</a>
+        <a class="font-['Inter'] text-lg font-medium text-gray-600 w-full text-center py-3 hover:bg-gray-50" href="./nosotros">Nosotros</a>
+        <a class="font-['Inter'] text-lg font-bold text-primary bg-primary/5 w-full text-center py-3" href="./servicios">Servicios</a>
+        <a class="font-['Inter'] text-lg font-medium text-gray-600 w-full text-center py-3 hover:bg-gray-50" href="./contacto">Contacto</a>
+        <button onclick="window.location.href='./contacto'" class="bg-primary text-on-primary w-3/4 h-[48px] font-semibold transition-all duration-300 rounded-lg shadow-md mt-4">
             Cotizar
         </button>
     </div>
 </header>
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const btn = document.getElementById('mobileMenuBtn');
-        const menu = document.getElementById('mobileMenu');
-        if(btn && menu) {
-            btn.addEventListener('click', () => {
-                menu.classList.toggle('hidden');
-            });
-        }
-    });
-</script>
-<main>
-<!-- Hero Section -->
-<section class="relative bg-primary-container py-xl overflow-hidden">
-<div class="absolute inset-0 opacity-20">
-<img alt="Almacén logístico moderno de Fletes y mudanzas El Lince, mostrando nuestra capacidad operativa, eficiencia y seguridad para mudanzas y resguardo de inventario corporativo." class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJ-CixSzP_1q1lbk_8aTZ1-cHVl9b5pawzggqkxbPZkMPgwW_r3uEVD-sRvD8bpRpsPrNTQmAjTk-k3vgalFimRtzwd89hViIFWMMmxGIwsdWDCYtwQ8rDLy-dH3-j2H93l0N6_pWLiZp_hZQNX91upmADGyAc6veRSuo4Fb87Scr1-uJ5lKJnMNfzN3n__txXn0KM9ZzDJSDGL-glJUCPBcdbm4PhvjDGxh7sQXWNbyKNZiH0tobmB_I7hlYoLi-iSncX6Q3m_yQ"/>
-</div>
-<div class="relative max-w-7xl mx-auto px-8 py-xl">
-<div class="max-w-3xl">
-<h1 class="font-h1 text-h1 text-white mb-md">Nuestros Servicios</h1>
-<p class="font-body-lg text-body-lg text-on-primary-container">
-                    soluciones integrales de transporte diseñadas para garantizar la seguridad de su patrimonio con la puntualidad y el profesionalismo que nos caracteriza.
-                </p>
-</div>
-</div>
-</section>
-<!-- Services Grid (Bento Style) -->
-<section class="max-w-7xl mx-auto px-8 py-xxl">
-<div class="grid grid-cols-1 md:grid-cols-12 gap-lg">
-<!-- mudanzas de Hogar -->
-<div class="md:col-span-8 bg-white border border-outline-variant p-lg flex flex-col justify-between hover:shadow-lg hover:-translate-y-1 transition-all duration-300 rounded-xl overflow-hidden">
-<div class="mb-xl">
-<div class="bg-primary-fixed w-12 h-12 flex items-center justify-center mb-md">
-<span class="material-symbols-outlined text-primary text-3xl">home</span>
-</div>
-<h2 class="font-h2 text-h2 text-primary mb-sm">mudanzas de Hogar</h2>
-<p class="font-body-md text-secondary mb-md">
-                        Entendemos que su hogar es lo más importante. Ofrecemos un servicio enfocado en la máxima confianza y cuidado absoluto de sus bienes, utilizando vehículos equipados con sistemas de sujecin avanzados para traslados locales y nacionales sin riesgos.
-                    </p>
-</div>
-<img loading="lazy" alt="mudanzas Hogar" class="w-full h-64 object-cover grayscale-[0.5] contrast-[1.1]" data-alt="A professional moving team in clean navy blue uniformás carefully loading a high-quality wooden cabinet into a white truck. The setting is a bright residential street with natural morning light. The composition focuses on the precision of the grip and the protective padding used, evoking security, trust, and professional accountability." src="./assets/loading.png"/>
-</div>
-<!-- mudanzas Corporativas -->
-<div class="md:col-span-4 bg-white border border-outline-variant p-lg flex flex-col hover:shadow-lg hover:-translate-y-1 transition-all duration-300 rounded-xl overflow-hidden">
-<div class="bg-primary-fixed w-12 h-12 flex items-center justify-center mb-md">
-<span class="material-symbols-outlined text-primary text-3xl">business</span>
-</div>
-<h3 class="font-h3 text-h3 text-primary mb-sm">mudanzas Corporativas</h3>
-<p class="font-body-sm text-secondary mb-lg">
-                    Eficiencia logística para que su empresa no se detenga. Traslados de oficinas, equipo de cmputo y mobiliario industrial bajo estrictos cronogramas de entrega.
-                </p>
-<div class="mt-auto">
-<img loading="lazy" alt="mudanzas Corporativas" class="w-full h-48 object-cover" data-alt="A modern, high-end office space with large windows and minimalist glass desks, during an organized move. Neatly labeled boxes are placed strategically beside professional workstations. The lighting is crisp and cool, emphasizing a no-nonsense business environment that prioritizes order, logistics, and punctuality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfIHOGlW44Y6yvnLMgIkCE3R5WOtJjHWSg52XKeVJExOpIiLguh9KBz1zhA_jWC7MNkw1Z3Axog3-BCh4NqvNcKMK2xYDSHFkHjGAb9FADCY5_8GWQ9CZxe6xXW8YhiZfoU0cH9V2BfORUkGyVT-gFSPT-lYqv8bU44uCEeD1VkWjEDepWuSs-XAvirUC-aLwrgeEQ0vJUyCTkmgIewdqluAVT6KqrnI3MEfASbcR3ncU0RUGHy2N_grPrDGGva6tMCfj5yJOcR4E"/>
-</div>
-</div>
-<!-- Empaque y Embalaje -->
-<div class="md:col-span-12 grid md:grid-cols-2 bg-surface-container border border-outline-variant hover:shadow-lg hover:-translate-y-1 transition-all duration-300 rounded-xl overflow-hidden">
-<div class="p-xl flex flex-col justify-center">
-<div class="bg-primary-fixed w-12 h-12 flex items-center justify-center mb-md">
-<span class="material-symbols-outlined text-primary text-3xl">inventory_2</span>
-</div>
-<h2 class="font-h2 text-h2 text-primary mb-sm">Empaque y Embalaje</h2>
-<p class="font-body-md text-secondary mb-lg">
-                        Proteccin total con materiales de alta calidad. Utilizamos cajas de doble corrugado, burbuja protectora, hule film y cajas armario para garantizar que cada objeto llegue en perfectas condiciones. No solo transportamos, cuidamos cada detalle.
-                    </p>
-<ul class="space-y-sm text-body-sm text-on-surface-variant">
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Materiales grado exportacin</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Personal especializado en cristalera</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Inventario codificado de cajas</li>
-</ul>
-</div>
-<div class="h-full min-h-[300px]">
-<img loading="lazy" alt="Empaque y Embalaje" class="w-full h-full object-cover" data-alt="A close-up shot of hands wearing professional work gloves precisely wrapping a fragile porcelain vase with clear industrial bubble wrap. The background is a clean warehouse setting with soft directional lighting. The visual style is crisp and corporate, highlighting the meticulous care and protection of high-value items." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkWFrxyGi63mfDOoTncuMocolgen6Ts6KoOGjNgdrVh0dVDnj5-8iQqsc4qZrZ8ibDcryfaQk7HvZ9zkVP4OcJO_PyM4_A6QFR9_tZe7JBfzWlMZ5RP8LwrI1_v8It0Q0pngGGOUlBkEgFDSb8nGPJX8x9tE9rs68k5hbbJCIZDhWvkUO7Wvpzgoz-bDDLN2tGBSnlnpxeIHOuOioMkxhR0w5WLTxlbX2PhRAXRR7XpcL4-aMQrn1KBHik_yOGj4IG93dOszeZQqk"/>
-</div>
-</div>
-</div>
-</section>
-<!-- Value Proposition Section -->
-<section class="bg-white py-xxl border-t border-b border-outline-variant">
-<div class="max-w-7xl mx-auto px-8">
-<div class="text-center mb-xl">
-<span class="font-label-caps text-primary tracking-widest">NUESTROS VALORES</span>
-<h2 class="font-h1 text-h2 text-on-background mt-sm">Por qu elegir a El Lince</h2>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-xl">
-<div class="text-center p-md">
-<span class="material-symbols-outlined text-primary text-5xl mb-md">local_shipping</span>
-<h3 class="font-h3 text-h3 text-on-background mb-sm">Flota Moderna</h3>
-<p class="font-body-md text-secondary">vehículos de diversos tamaos equipados con rastreo GPS y suspensin neumtica para máxima estábilidad.</p>
-</div>
-<div class="text-center p-md">
-<span class="material-symbols-outlined text-primary text-5xl mb-md">verified_user</span>
-<h3 class="font-h3 text-h3 text-on-background mb-sm">Proteccin Total</h3>
-<p class="font-body-md text-secondary">Seguro de carga disponible y protocolos de manejo de mercanca de alta fragilidad.</p>
-</div>
-<div class="text-center p-md">
-<span class="material-symbols-outlined text-primary text-5xl mb-md">history_toggle_off</span>
-<h3 class="font-h3 text-h3 text-on-background mb-sm">Puntualidad</h3>
-<p class="font-body-md text-secondary">Respetamos su tiempo. Coordinacin logística milimtrica para entregas en la ventana horaria pactada.</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Call to Action -->
-<section class="max-w-7xl mx-auto px-8 py-xxl">
-<div class="bg-primary rounded-xl p-xl text-center flex flex-col items-center">
-<h2 class="font-h2 text-h2 text-white mb-md">Listo para su prximo movimiento?</h2>
-<p class="font-body-lg text-on-primary-container max-w-2xl mb-xl">
-                Permita que nuestros expertos en logística le brinden una Cotización personalizada sin compromiso. Calidad y seguridad garantizadas.
-            </p>
-<button onclick="window.location.href='./contacto.html'" class="bg-white text-primary px-xl h-[48px] font-label-caps rounded-lg hover:bg-surface-container transition-all duration-300 hover:-translate-y-1 hover:shadow-lg flex items-center gap-2">
-                Obtn tu Cotización <span class="material-symbols-outlined">arrow_forward</span>
-</button>
-</div>
-</section>
-</main>
 
-    </div>
-<!-- Payment Methods -->
-    <div class="max-w-7xl mx-auto px-8 pb-16">
-        <div class="flex flex-col items-center gap-8 pt-12 border-t border-gray-200 dark:border-gray-800">
-            <span class="text-[12px] font-bold uppercase tracking-[0.4em] text-gray-400 dark:text-gray-500">Métodos de Pago</span>
-            <div class="flex flex-wrap justify-center items-center gap-x-16 gap-y-8 transition-all duration-500">
-                <div class="flex items-center hover:scale-110 transition-all cursor-default opacity-50 hover:opacity-100 grayscale hover:grayscale-0">
-                    <svg style="height: 24px; width: auto;" viewBox="0 15 48 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.8122 32H13.6811L10.4746 16H15.6057L18.8122 32Z" fill="#1A1F71"/><path d="M30.4633 16.5413C28.4616 16.1558 25.8647 16.0354 23.4611 16.0354C19.2633 16.0354 16.2917 18.061 16.2711 20.9169C16.2411 23.0567 18.3544 24.2505 19.9575 24.9625C21.6014 25.698 22.155 26.1585 22.1461 26.8091C22.1331 27.8049 20.8407 28.2505 19.6469 28.2505C18.1066 28.2505 16.7905 27.9171 15.6317 27.4262L15.0117 31.061C16.0969 31.5215 18.1722 31.907 20.315 31.907C24.7772 31.907 27.6894 29.9044 27.7275 26.8393C27.7556 24.3167 25.9922 23.0567 23.6331 22.0313C21.8211 21.2599 21.1578 20.8039 21.1667 20.1533C21.1667 19.4187 22.115 18.625 23.8994 18.625C25.4056 18.625 26.7905 18.8856 27.8686 19.324L28.3753 16.0354C29.2319 16.2558 30.015 16.4213 30.4633 16.5413Z" fill="#1A1F71"/><path d="M37.7525 16H33.8441C32.635 16 31.705 16.321 31.1739 17.478L25.3217 32H30.7011L31.7764 29.351H38.3522L38.9722 32H44L39.6389 16H37.7525ZM33.3283 25.5413L35.8317 19.324L37.2764 25.5413H33.3283Z" fill="#F7B600"/><path d="M12.1931 16L7.135 26.9141L6.5986 24.3167C5.6694 21.4613 3.0131 18.4357 0 17.1513L0.0811 17.478C2.5539 18.4116 4.8872 20.3391 5.9258 22.9141L9.1228 32H14.5367L22.25 16H12.1931Z" fill="#1A1F71"/></svg>
+<main>
+    <section class="relative bg-primary-container py-xl overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+            <img fetchpriority="high" alt="Almacén logístico de Fletes y Mudanzas El Lince" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJ-CixSzP_1q1lbk_8aTZ1-cHVl9b5pawzggqkxbPZkMPgwW_r3uEVD-sRvD8bpRpsPrNTQmAjTk-k3vgalFimRtzwd89hViIFWMMmxGIwsdWDCYtwQ8rDLy-dH3-j2H93l0N6_pWLiZp_hZQNX91upmADGyAc6veRSuo4Fb87Scr1-uJ5lKJnMNfzN3n__txXn0KM9ZzDJSDGL-glJUCPBcdbm4PhvjDGxh7sQXWNbyKNZiH0tobmB_I7hlYoLi-iSncX6Q3m_yQ" width="1920" height="400"/>
+        </div>
+        <div class="relative max-w-7xl mx-auto px-8 py-xl text-center md:text-left">
+            <h1 class="font-h1 text-h1 text-white mb-md">Nuestros Servicios</h1>
+            <p class="font-body-lg text-white/90 max-w-2xl">
+                Soluciones integrales de transporte diseñadas para garantizar la seguridad de su patrimonio con el profesionalismo que nos caracteriza.
+            </p>
+        </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-8 py-xxl">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-lg">
+            <!-- Mudanzas de Hogar -->
+            <div class="md:col-span-8 bg-white border border-outline-variant p-lg flex flex-col justify-between hover:shadow-lg hover:-translate-y-1 transition-all duration-300 rounded-xl overflow-hidden">
+                <div class="mb-xl">
+                    <div class="bg-primary-container w-12 h-12 rounded-full flex items-center justify-center mb-md text-primary">
+                        <span class="material-symbols-outlined text-3xl">home</span>
+                    </div>
+                    <h2 class="font-h2 text-h2 text-primary mb-sm">Mudanzas de Hogar</h2>
+                    <p class="font-body-md text-on-surface-variant mb-md">
+                        Entendemos que su hogar es lo más importante. Ofrecemos un servicio enfocado en la máxima confianza y cuidado absoluto de sus bienes, traslados locales y nacionales sin riesgos.
+                    </p>
                 </div>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" style="height: 24px; width: auto;" class="hover:scale-110 transition-all cursor-default opacity-50 hover:opacity-100 grayscale hover:grayscale-0"/>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal" style="height: 24px; width: auto;" class="hover:scale-110 transition-all cursor-default opacity-50 hover:opacity-100 grayscale hover:grayscale-0"/>
-                <div class="flex items-center gap-3 group hover:scale-110 transition-all cursor-default opacity-50 hover:opacity-100 grayscale hover:grayscale-0">
-                    <span class="material-symbols-outlined text-[28px] text-gray-600 dark:text-gray-400">account_balance</span>
-                    <span class="text-[12px] font-black text-gray-600 dark:text-gray-400 uppercase tracking-tight">Transferencia</span>
+                <img loading="lazy" alt="Personal de mudanza cargando muebles" class="w-full h-64 object-cover rounded-lg" src="./assets/loading.webp" width="800" height="256"/>
+            </div>
+
+            <!-- Mudanzas Corporativas -->
+            <div class="md:col-span-4 bg-white border border-outline-variant p-lg flex flex-col hover:shadow-lg hover:-translate-y-1 transition-all duration-300 rounded-xl overflow-hidden">
+                <div class="bg-primary-container w-12 h-12 rounded-full flex items-center justify-center mb-md text-primary">
+                    <span class="material-symbols-outlined text-3xl">business</span>
                 </div>
-                <div class="flex items-center gap-3 group hover:scale-110 transition-all cursor-default opacity-50 hover:opacity-100 grayscale hover:grayscale-0">
-                    <span class="material-symbols-outlined text-[28px] text-gray-600 dark:text-gray-400">payments</span>
-                    <span class="text-[12px] font-black text-gray-600 dark:text-gray-400 uppercase tracking-tight">Efectivo</span>
+                <h3 class="font-h3 text-h3 text-primary mb-sm">Mudanzas Corporativas</h3>
+                <p class="font-body-sm text-on-surface-variant mb-lg">
+                    Eficiencia logística para que su empresa no se detenga. Traslados de oficinas y equipo especializado.
+                </p>
+                <div class="mt-auto">
+                    <img loading="lazy" alt="Oficina moderna lista para mudanza" class="w-full h-48 object-cover rounded-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfIHOGlW44Y6yvnLMgIkCE3R5WOtJjHWSg52XKeVJExOpIiLguh9KBz1zhA_jWC7MNkw1Z3Axog3-BCh4NqvNcKMK2xYDSHFkHjGAb9FADCY5_8GWQ9CZxe6xXW8YhiZfoU0cH9V2BfORUkGyVT-gFSPT-lYqv8bU44uCEeD1VkWjEDepWuSs-XAvirUC-aLwrgeEQ0vJUyCTkmgIewdqluAVT6KqrnI3MEfASbcR3ncU0RUGHy2N_grPrDGGva6tMCfj5yJOcR4E" width="400" height="192"/>
+                </div>
+            </div>
+
+            <!-- Empaque y Embalaje -->
+            <div class="md:col-span-12 grid md:grid-cols-2 bg-surface-container border border-outline-variant hover:shadow-lg hover:-translate-y-1 transition-all duration-300 rounded-xl overflow-hidden">
+                <div class="p-xl flex flex-col justify-center">
+                    <div class="bg-primary-container w-12 h-12 rounded-full flex items-center justify-center mb-md text-primary">
+                        <span class="material-symbols-outlined text-3xl">inventory_2</span>
+                    </div>
+                    <h2 class="font-h2 text-h2 text-primary mb-sm">Empaque y Embalaje</h2>
+                    <p class="font-body-md text-on-surface-variant mb-lg">
+                        Protección total con materiales de alta calidad. Utilizamos cajas de doble corrugado, burbuja protectora y hule film para garantizar la integridad de sus pertenencias.
+                    </p>
+                    <ul class="space-y-sm text-body-sm text-on-surface-variant">
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Materiales de alta resistencia</li>
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Personal especializado en cristalería</li>
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Inventario detallado</li>
+                    </ul>
+                </div>
+                <div class="h-full min-h-[300px]">
+                    <img loading="lazy" alt="Empaque profesional de artículos frágiles" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkWFrxyGi63mfDOoTncuMocolgen6Ts6KoOGjNgdrVh0dVDnj5-8iQqsc4qZrZ8ibDcryfaQk7HvZ9zkVP4OcJO_PyM4_A6QFR9_tZe7JBfzWlMZ5RP8LwrI1_v8It0Q0pngGGOUlBkEgFDSb8nGPJX8x9tE9rs68k5hbbJCIZDhWvkUO7Wvpzgoz-bDDLN2tGBSnlnpxeIHOuOioMkxhR0w5WLTxlbX2PhRAXRR7XpcL4-aMQrn1KBHik_yOGj4IG93dOszeZQqk" width="800" height="400"/>
                 </div>
             </div>
         </div>
 
-<!-- Footer -->
-<footer class="bg-white dark:bg-slate-900">
-<div class="flex flex-col md:flex-row justify-between items-center py-12 px-8 max-w-7xl mx-auto gap-4">
-<!-- Footer Logo Removed -->
-<div class="flex flex-wrap justify-center gap-6">
-<a class="font-['Inter'] text-xs font-medium text-gray-500 dark:text-gray-500 hover:underline decoration-blue-900 dark:decoration-blue-400" href="./privacidad.html">Aviso de Privacidad</a>
-<a class="font-['Inter'] text-xs font-medium text-gray-500 dark:text-gray-500 hover:underline decoration-blue-900 dark:decoration-blue-400" href="./terminos.html">Términos y Condiciones</a>
-<a href="tel:+525563285207" class="font-['Inter'] text-xs font-medium text-blue-900 dark:text-blue-400 hover:underline">Tel: 5563285207</a>
-</div>
-<div class="font-['Inter'] text-xs font-medium text-gray-500 dark:text-gray-500">
-                © 2024 Fletes y mudanzas el Lince. Todos los derechos reservados.
+        <!-- Tabla de Comparación de Servicios (Punto 39, 58) -->
+        <div class="mt-xxl overflow-x-auto">
+            <h2 class="font-h2 text-h2 text-on-surface mb-lg text-center">Comparativa de Paquetes</h2>
+            <table class="w-full border-collapse bg-white rounded-xl overflow-hidden shadow-sm border border-outline-variant">
+                <thead>
+                    <tr class="bg-primary text-white">
+                        <th class="p-6 text-left font-bold">Características</th>
+                        <th class="p-6 text-center font-bold">Flete Básico</th>
+                        <th class="p-6 text-center font-bold">Mudanza Estándar</th>
+                        <th class="p-6 text-center font-bold">Mudanza Premium</th>
+                    </tr>
+                </thead>
+                <tbody class="text-on-surface-variant">
+                    <tr class="border-b border-outline-variant hover:bg-surface-container-low transition-colors">
+                        <td class="p-6 font-semibold text-on-surface">Carga y Descarga</td>
+                        <td class="p-6 text-center"><span class="material-symbols-outlined text-green-700">check_circle</span></td>
+                        <td class="p-6 text-center"><span class="material-symbols-outlined text-green-700">check_circle</span></td>
+                        <td class="p-6 text-center"><span class="material-symbols-outlined text-green-700">check_circle</span></td>
+                    </tr>
+                    <tr class="border-b border-outline-variant hover:bg-surface-container-low transition-colors">
+                        <td class="p-6 font-semibold text-on-surface">Protección con Playo</td>
+                        <td class="p-6 text-center text-red-600"><span class="material-symbols-outlined">cancel</span></td>
+                        <td class="p-6 text-center"><span class="material-symbols-outlined text-green-700">check_circle</span></td>
+                        <td class="p-6 text-center"><span class="material-symbols-outlined text-green-700">check_circle</span></td>
+                    </tr>
+                    <tr class="border-b border-outline-variant hover:bg-surface-container-low transition-colors">
+                        <td class="p-6 font-semibold text-on-surface">Empaque de Cristalería</td>
+                        <td class="p-6 text-center text-red-600"><span class="material-symbols-outlined">cancel</span></td>
+                        <td class="p-6 text-center text-red-600"><span class="material-symbols-outlined">cancel</span></td>
+                        <td class="p-6 text-center"><span class="material-symbols-outlined text-green-700">check_circle</span></td>
+                    </tr>
+                    <tr class="hover:bg-surface-container-low transition-colors">
+                        <td class="p-6 font-semibold text-on-surface">Seguro de Carga</td>
+                        <td class="p-6 text-center">Opcional</td>
+                        <td class="p-6 text-center">Opcional</td>
+                        <td class="p-6 text-center"><span class="material-symbols-outlined text-green-700">check_circle</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="bg-white py-xxl border-t border-b border-outline-variant">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="text-center mb-xl">
+                <span class="text-primary font-bold tracking-widest uppercase text-sm">Nuestra Promesa</span>
+                <h2 class="font-h2 text-h2 text-on-surface mt-sm">¿Por qué elegir a El Lince?</h2>
             </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-xl">
+                <div class="text-center p-md">
+                    <span class="material-symbols-outlined text-primary text-5xl mb-md">local_shipping</span>
+                    <h3 class="font-bold text-on-surface mb-sm">Flota Moderna</h3>
+                    <p class="text-on-surface-variant">Vehículos equipados con rastreo GPS y suspensión para máxima estabilidad.</p>
+                </div>
+                <div class="text-center p-md">
+                    <span class="material-symbols-outlined text-primary text-5xl mb-md">verified_user</span>
+                    <h3 class="font-bold text-on-surface mb-sm">Protección Total</h3>
+                    <p class="text-on-surface-variant">Seguro de carga y protocolos estrictos de manejo para mercancía frágil.</p>
+                </div>
+                <div class="text-center p-md">
+                    <span class="material-symbols-outlined text-primary text-5xl mb-md">history_toggle_off</span>
+                    <h3 class="font-bold text-on-surface mb-sm">Puntualidad</h3>
+                    <p class="text-on-surface-variant">Respetamos su tiempo. Coordinación logística precisa para cumplir horarios.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-8 py-xxl">
+        <div class="bg-primary rounded-xl p-xl text-center flex flex-col items-center">
+            <h2 class="font-h2 text-h2 text-white mb-md">¿Listo para su próximo movimiento?</h2>
+            <p class="font-body-lg text-white/80 max-w-2xl mb-xl">
+                Permita que nuestros expertos en logística le brinden una cotización personalizada sin compromiso. Calidad y seguridad garantizadas.
+            </p>
+            <button onclick="window.location.href='./contacto'" class="bg-white text-primary px-xl h-[48px] font-bold rounded-lg hover:bg-surface-container transition-all duration-300 hover:-translate-y-1 hover:shadow-lg flex items-center gap-2">
+                Obtén tu Cotización <span class="material-symbols-outlined">arrow_forward</span>
+            </button>
+        </div>
+    </section>
+</main>
+
+<footer class="bg-white dark:bg-slate-900 border-t border-gray-200 dark:border-gray-800">
+    <div class="flex flex-col md:flex-row justify-between items-center py-12 px-8 max-w-7xl mx-auto gap-4">
+        <div class="font-['Inter'] text-xs font-medium text-gray-500">
+            © 2024 Fletes y Mudanzas El Lince. Todos los derechos reservados.
+        </div>
+        <div class="flex flex-wrap justify-center gap-8">
+            <a class="font-['Inter'] text-xs font-medium text-gray-500 hover:underline" href="./privacidad">Aviso de Privacidad</a>
+            <a class="font-['Inter'] text-xs font-medium text-gray-500 hover:underline" href="./terminos">Términos y Condiciones</a>
+            <a href="tel:+525563285207" class="font-['Inter'] text-xs font-bold text-blue-900">Tel: 5563285207</a>
+        </div>
+    </div>
+</footer>
+
+<div class="fixed bottom-6 right-6 flex flex-col gap-4 z-50">
+    <a href="https://wa.me/525563285207" target="_blank" class="bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:-translate-y-1 transition-all duration-300">
+        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+    </a>
+    <button id="backToTopBtn" class="opacity-0 translate-y-10 bg-primary text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 pointer-events-none">
+        <span class="material-symbols-outlined">arrow_upward</span>
+    </button>
 </div>
 
-</footer>
-    <!-- Floating Buttons -->
-    <div class="fixed bottom-6 right-6 flex flex-col gap-4 z-50">
-        <!-- WhatsApp Button -->
-        <a href="https://wa.me/525563285207" target="_blank" class="bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-[#20bd5a] hover:-translate-y-1 transition-all duration-300 group relative">
-            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
-            <span class="absolute right-16 bg-white text-gray-800 text-xs font-bold px-3 py-2 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap">
-                WhatsApp
-            </span>
-        </a>
-        <!-- Back to Top Button -->
-        <button id="backToTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="opacity-0 translate-y-10 bg-primary text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-primary-container hover:text-primary transition-all duration-300 pointer-events-none">
-            <span class="material-symbols-outlined">arrow_upward</span>
-        </button>
-    </div>
-
-    <script>
-        // Back to top button logic
-        window.addEventListener('scroll', () => {
-            const btn = document.getElementById('backToTopBtn');
-            if (window.scrollY > 300) {
-                btn.classList.remove('opacity-0', 'translate-y-10', 'pointer-events-none');
-                btn.classList.add('opacity-100', 'translate-y-0');
-            } else {
-                btn.classList.add('opacity-0', 'translate-y-10', 'pointer-events-none');
-                btn.classList.remove('opacity-100', 'translate-y-0');
-            }
-        });
-    </script>
-</body></html>
+<script defer src="./assets/app.min.js"></script>
+</body>
+</html>

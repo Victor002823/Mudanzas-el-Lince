@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/style.min.css">
+
+    <title>Servicio de Empaque y Embalaje Profesional | Fletes y Mudanzas El Lince</title>
+    <meta name="description" content="Protección total para sus pertenencias. Ofrecemos empaque y embalaje profesional con materiales de alta calidad: cajas, plástico burbuja, playo y más."/>
+    <meta name="keywords" content="empaque para mudanzas, embalaje profesional, cajas de mudanza, protección de muebles, empaquetado seguro"/>
+    <meta name="author" content="Fletes y Mudanzas El Lince"/>
+    
+    <link rel="canonical" href="https://mudanzasellince.com/embalaje">
+    <meta name="theme-color" content="#0f172a">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Empaque y Embalaje Profesional | Fletes y Mudanzas El Lince"/>
+    <meta property="og:description" content="No te preocupes por tus objetos delicados. Nosotros los protegemos con materiales de primera calidad."/>
+    <meta property="og:image" content="https://mudanzasellince.com/assets/hero.webp"/>
+    <meta property="og:url" content="https://mudanzasellince.com/embalaje"/>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./assets/logo.webp"/>
+
+    <!-- Breadcrumbs -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inicio",
+        "item": "https://mudanzasellince.com/index"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Servicios",
+        "item": "https://mudanzasellince.com/servicios"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Embalaje",
+        "item": "https://mudanzasellince.com/embalaje"
+      }]
+    }
+    </script>
+    <!-- Schema JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Servicio de Empaque y Embalaje",
+      "provider": {
+        "@type": "MovingCompany",
+        "name": "Fletes y Mudanzas El Lince"
+      },
+      "description": "Protección profesional de bienes y muebles mediante técnicas avanzadas de embalaje y materiales certificados."
+    }
+    </script>
+</head>
+<body class="bg-surface font-body-md text-on-surface antialiased">
+
+<header class="bg-white dark:bg-slate-900 border-b border-gray-200 dark:border-gray-800 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center py-4 px-8">
+        <a href="./index" class="flex items-center">
+            <img src="./assets/logo.webp" alt="Fletes y Mudanzas El Lince" width="160" height="56" class="h-12 md:h-14 w-auto object-contain transition-transform hover:scale-105" />
+        </a>
+
+        <nav class="hidden md:flex items-center gap-8">
+            <a class="font-['Inter'] text-sm tracking-tight text-gray-600 dark:text-gray-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200" href="./index">Inicio</a>
+            <a class="font-['Inter'] text-sm tracking-tight text-gray-600 dark:text-gray-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200" href="./nosotros">Nosotros</a>
+            <a class="font-['Inter'] text-sm tracking-tight text-gray-600 dark:text-gray-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200" href="./servicios">Servicios</a>
+            <a class="font-['Inter'] text-sm tracking-tight text-gray-600 dark:text-gray-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200" href="./contacto">Contacto</a>
+        </nav>
+
+        <button onclick="window.location.href='./contacto'" class="hidden md:block bg-primary text-on-primary px-6 h-[48px] font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-lg rounded-lg">
+            Cotizar
+        </button>
+
+        <button id="mobileMenuBtn" class="md:hidden text-primary p-2 hover:bg-surface-container rounded-lg transition-colors" aria-label="Abrir menú móvil">
+            <span class="material-symbols-outlined text-3xl">menu</span>
+        </button>
+    </div>
+
+    <div id="mobileMenu" class="hidden md:hidden absolute top-full left-0 w-full bg-white dark:bg-slate-900 border-t border-gray-200 dark:border-gray-800 shadow-xl flex flex-col items-center py-6 gap-2">
+        <a class="font-['Inter'] text-lg font-medium text-gray-600 w-full text-center py-3 hover:bg-gray-50" href="./index">Inicio</a>
+        <a class="font-['Inter'] text-lg font-medium text-gray-600 w-full text-center py-3 hover:bg-gray-50" href="./nosotros">Nosotros</a>
+        <a class="font-['Inter'] text-lg font-medium text-gray-600 w-full text-center py-3 hover:bg-gray-50" href="./servicios">Servicios</a>
+        <a class="font-['Inter'] text-lg font-medium text-gray-600 w-full text-center py-3 hover:bg-gray-50" href="./contacto">Contacto</a>
+        <button onclick="window.location.href='./contacto'" class="bg-primary text-on-primary w-3/4 h-[48px] font-semibold transition-all duration-300 rounded-lg shadow-md mt-4">
+            Cotizar
+        </button>
+    </div>
+</header>
+
+<main>
+    <section class="bg-secondary-container py-xl text-center text-white">
+        <div class="max-w-4xl mx-auto px-8">
+            <h1 class="font-h1 text-h1 mb-md">Empaque y Embalaje</h1>
+            <p class="font-body-lg text-white/90">La seguridad de sus pertenencias empieza con una protección profesional.</p>
+        </div>
+    </section>
+
+    <section class="py-xxl px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-xl">
+                <div>
+                    <h2 class="font-h2 text-h2 text-primary mb-md">Materiales de Alta Resistencia</h2>
+                    <p class="font-body-lg text-on-surface-variant mb-lg">
+                        En Fletes y Mudanzas El Lince no escatimamos en seguridad. Utilizamos materiales certificados para garantizar que cada objeto, desde el más robusto hasta el más frágil, viaje totalmente protegido.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="flex items-center gap-3 p-4 bg-surface-container rounded-lg">
+                            <span class="material-symbols-outlined text-primary">inventory_2</span>
+                            <span class="font-bold">Cajas reforzadas</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-4 bg-surface-container rounded-lg">
+                            <span class="material-symbols-outlined text-primary">bubbles</span>
+                            <span class="font-bold">Plástico burbuja</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-4 bg-surface-container rounded-lg">
+                            <span class="material-symbols-outlined text-primary">layers</span>
+                            <span class="font-bold">Playo (Hule film)</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-4 bg-surface-container rounded-lg">
+                            <span class="material-symbols-outlined text-primary">bed</span>
+                            <span class="font-bold">Colchonetas</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="bg-surface-container-low p-lg rounded-2xl border border-outline-variant h-full">
+                        <h3 class="font-h3 text-h3 text-primary mb-md">Tipos de Embalaje</h3>
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="font-bold text-lg text-secondary">Embalaje Básico</h4>
+                                <p class="text-on-surface-variant text-sm">Protección de muebles grandes con colchonetas y hule film para evitar rayaduras durante la carga y descarga.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg text-secondary">Embalaje de Frágiles</h4>
+                                <p class="text-on-surface-variant text-sm">Cuidado especial para loza, cristalería y obras de arte utilizando papel grado alimenticio y burbuja.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg text-secondary">Embalaje de Tecnología</h4>
+                                <p class="text-on-surface-variant text-sm">Protección antiestática y amortiguación reforzada para pantallas, monitores y equipo electrónico.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-xl px-8 bg-surface-container-lowest">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="font-h2 text-h2 text-primary mb-md text-center">Técnicas de Protección Superior</h2>
+            <p class="text-lg text-on-surface-variant text-center mb-xl">
+                Nuestros expertos están capacitados en técnicas de embalaje profesional, asegurando que el contenido de las cajas no sufra desplazamientos internos y que los muebles no se vean afectados por la vibración del transporte.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="material-symbols-outlined text-primary text-3xl">box_edit</span>
+                    </div>
+                    <h4 class="font-bold mb-2">Sellado Seguro</h4>
+                    <p class="text-xs text-on-surface-variant">Cierre reforzado con cinta de alta adherencia en todos los bordes.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="material-symbols-outlined text-primary text-3xl">label</span>
+                    </div>
+                    <h4 class="font-bold mb-2">Etiquetado</h4>
+                    <p class="text-xs text-on-surface-variant">Identificación clara de contenido y nivel de fragilidad.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="material-symbols-outlined text-primary text-3xl">door_front</span>
+                    </div>
+                    <h4 class="font-bold mb-2">Esquineros</h4>
+                    <p class="text-xs text-on-surface-variant">Protección adicional en las puntas de muebles y cuadros.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="material-symbols-outlined text-primary text-3xl">recycling</span>
+                    </div>
+                    <h4 class="font-bold mb-2">Responsabilidad</h4>
+                    <p class="text-xs text-on-surface-variant">Uso responsable de materiales y manejo de residuos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-primary py-xl text-center">
+        <div class="max-w-4xl mx-auto px-8">
+            <h2 class="font-h2 text-h2 text-white mb-md">No arriesgue su patrimonio</h2>
+            <p class="font-body-lg text-white/80 mb-lg">Añada el servicio de empaque profesional a su cotización y viaje con total tranquilidad.</p>
+            <button onclick="window.location.href='./contacto'" class="bg-white text-primary font-bold py-md px-xl rounded-lg hover:bg-surface-container-low transition-all">Cotizar Servicio de Empaque</button>
+        </div>
+    </section>
+</main>
+
+<footer class="bg-white dark:bg-slate-900 border-t border-gray-200 dark:border-gray-800">
+    <div class="flex flex-col md:flex-row justify-between items-center py-12 px-8 max-w-7xl mx-auto gap-4">
+        <div class="font-['Inter'] text-xs font-medium text-gray-500">
+            © 2024 Fletes y Mudanzas El Lince. Todos los derechos reservados.
+        </div>
+        <div class="flex flex-wrap justify-center gap-8">
+            <a class="font-['Inter'] text-xs font-medium text-gray-500 hover:underline" href="./privacidad">Aviso de Privacidad</a>
+            <a class="font-['Inter'] text-xs font-medium text-gray-500 hover:underline" href="./terminos">Términos y Condiciones</a>
+            <a href="tel:+525563285207" class="font-['Inter'] text-xs font-bold text-blue-900">Tel: 5563285207</a>
+        </div>
+    </div>
+</footer>
+
+<div class="fixed bottom-6 right-6 flex flex-col gap-4 z-50">
+    <a href="https://wa.me/525563285207" target="_blank" class="bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:-translate-y-1 transition-all duration-300">
+        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+    </a>
+    <button id="backToTopBtn" class="opacity-0 translate-y-10 bg-primary text-white v-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 pointer-events-none">
+        <span class="material-symbols-outlined">arrow_upward</span>
+    </button>
+</div>
+
+<script defer src="./assets/app.min.js"></script>
+</body>
+</html>

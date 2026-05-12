@@ -1948,24 +1948,6 @@ input:where([type='file']):focus {
   font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
 
-/* Fix for payment icons and logo scaling */
-
-.payment-icon {
-  height: 24px !important;
-  width: auto !important;
-}
-
-.company-logo {
-  height: 48px !important;
-  width: auto !important;
-}
-
-@media (min-width: 768px) {
-  .company-logo {
-    height: 56px !important;
-  }
-}
-
 .hover\:-translate-y-1:hover {
   --tw-translate-y: -0.25rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));

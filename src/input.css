@@ -5,3 +5,20 @@
 .material-symbols-outlined {
     font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
+
+/* Fix for payment icons and logo scaling */
+.payment-icon {
+    height: 24px !important;
+    width: auto !important;
+}
+
+.company-logo {
+    height: 48px !important;
+    width: auto !important;
+}
+
+@media (min-width: 768px) {
+    .company-logo {
+        height: 56px !important;
+    }
+}

@@ -4,7 +4,9 @@
   "description": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
   "main": "index.js",
   "scripts": {
-    "build": "npx tailwindcss@3.4.14 -i ./src/input.css -o ./assets/style.css --minify",
+    "build:css": "npx tailwindcss -i ./src/input.css -o ./assets/style.css && npx clean-css-cli -o ./assets/style.min.css ./assets/style.css",
+    "build:js": "npx terser ./assets/app.js -o ./assets/app.min.js",
+    "build": "npm run build:css && npm run build:js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,5 +25,8 @@
     "@tailwindcss/container-queries": "^0.1.1",
     "@tailwindcss/forms": "^0.5.11",
     "tailwindcss": "^3.4.14"
+  },
+  "dependencies": {
+    "sharp": "^0.34.5"
   }
 }
