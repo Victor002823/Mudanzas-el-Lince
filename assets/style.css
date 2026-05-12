@@ -942,6 +942,10 @@ input:where([type='file']):focus {
   height: 48px;
 }
 
+.h-\[600px\] {
+  height: 600px;
+}
+
 .h-auto {
   height: auto;
 }
@@ -1197,6 +1201,10 @@ input:where([type='file']):focus {
 
 .overflow-x-auto {
   overflow-x: auto;
+}
+
+.whitespace-nowrap {
+  white-space: nowrap;
 }
 
 .rounded {
@@ -1953,16 +1961,24 @@ input:where([type='file']):focus {
 .payment-icon {
   height: 24px !important;
   width: auto !important;
+  aspect-ratio: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .company-logo {
   height: 48px !important;
-  width: auto !important;
+  width: 160px !important;
+  /* Fixed width to match attributes and prevent shift */
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 @media (min-width: 768px) {
   .company-logo {
     height: 56px !important;
+    width: 186px !important;
+    /* Scaled width for 56px height */
   }
 }
 
