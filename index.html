@@ -5,8 +5,8 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfMZg.ttf" as="font" type="font/ttf" crossorigin>
-    <link rel="preload" href="https://fonts.gstatic.com/s/materialsymbolsoutlined/v336/kJF1BvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oDMzByHX9rA6RzaxHMPdY43zj-jCxv3fzvRNU22ZXGJpEpjC_1v-p_4MrImHCIJIZrDCvHOem.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/materialsymbolsoutlined/v336/kJF1BvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oDMzByHX9rA6RzaxHMPdY43zj-jCxv3fzvRNU22ZXGJpEpjC_1v-p_4MrImHCIJIZrDCvHOej.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"></noscript>
     <link rel="stylesheet" href="./assets/style.min.css" media="print" onload="this.media='all'">
@@ -14,29 +14,50 @@
 
     <style>
         :root { --surface: #faf8ff; --primary: #00236e; }
-        body { background-color: #faf8ff; margin: 0; font-family: system-ui, -apple-system, sans-serif; min-height: 100vh; }
+        body { background-color: #faf8ff; margin: 0; font-family: 'Inter', system-ui, -apple-system, sans-serif; min-height: 100vh; }
         header { background-color: #ffffff; min-height: 80px; position: sticky; top: 0; z-index: 50; border-bottom: 1px solid #e5e7eb; }
         .min-h-\[600px\] { min-height: 600px; }
         .min-h-\[400px\] { min-height: 400px; }
         .h-\[600px\] { height: 600px; }
         .h-\[48px\] { height: 48px; }
+        .py-xxl { padding-top: 80px; padding-bottom: 80px; }
+        .py-12 { padding-top: 3rem; padding-bottom: 3rem; }
+        .px-8 { padding-left: 2rem; padding-right: 2rem; }
+        .mb-md { margin-bottom: 16px; }
+        .mb-xl { margin-bottom: 48px; }
+        .text-h1 { font-size: 40px; line-height: 1.2; font-weight: 700; letter-spacing: -0.02em; }
+        .text-body-lg { font-size: 18px; line-height: 1.6; }
+        .font-h1, .font-body-lg { font-family: 'Inter', sans-serif; }
         .w-3\/4 { width: 75%; }
         .relative { position: relative; }
+        .absolute { position: absolute; }
+        .inset-0 { top: 0; right: 0; bottom: 0; left: 0; }
         .max-w-7xl { max-width: 80rem; margin-left: auto; margin-right: auto; }
+        .max-w-3xl { max-width: 48rem; }
         .flex { display: flex; }
+        .flex-wrap { flex-wrap: wrap; }
         .flex-col { flex-direction: column; }
         .items-center { align-items: center; }
         .justify-between { justify-content: space-between; }
         .hidden { display: none !important; }
         .bg-primary { background-color: #00236e; }
+        .bg-primary\/5 { background-color: rgba(0, 35, 110, 0.05); }
+        .bg-primary\/70 { background-color: rgba(0, 35, 110, 0.7); }
         .text-white { color: #ffffff; }
         .rounded-lg { border-radius: 0.5rem; }
+        .uppercase { text-transform: uppercase; }
+        .tracking-tight { letter-spacing: -0.025em; }
+        .z-0 { z-index: 0; }
+        .z-10 { z-index: 10; }
         @media (min-width: 768px) {
             .md\:flex { display: flex !important; }
             .md\:hidden { display: none !important; }
             .md\:block { display: block !important; }
+            .md\:h-14 { height: 3.5rem !important; }
         }
     </style>
+    
+    
     
         
     
