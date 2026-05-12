@@ -11,10 +11,16 @@ document.addEventListener('DOMContentLoaded', () => {
     if (mobileMenuBtn && mobileMenu) {
         mobileMenuBtn.addEventListener('click', () => {
             const isHidden = mobileMenu.classList.contains('hidden');
+            const menuIcon = mobileMenuBtn.querySelector('.material-symbols-outlined');
+            
             if (isHidden) {
                 mobileMenu.classList.remove('hidden');
+                if (menuIcon) menuIcon.textContent = 'close';
+                mobileMenuBtn.setAttribute('aria-label', 'Cerrar menú móvil');
             } else {
                 mobileMenu.classList.add('hidden');
+                if (menuIcon) menuIcon.textContent = 'menu';
+                mobileMenuBtn.setAttribute('aria-label', 'Abrir menú móvil');
             }
         });
 
@@ -22,6 +28,9 @@ document.addEventListener('DOMContentLoaded', () => {
         mobileLinks.forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
+                const menuIcon = mobileMenuBtn.querySelector('.material-symbols-outlined');
+                if (menuIcon) menuIcon.textContent = 'menu';
+                mobileMenuBtn.setAttribute('aria-label', 'Abrir menú móvil');
             });
         });
     }
@@ -29,15 +38,22 @@ document.addEventListener('DOMContentLoaded', () => {
     // 2. Back to Top Button Logic
     const backToTopBtn = document.getElementById('backToTopBtn');
     if (backToTopBtn) {
+        let isScrolling = false;
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                backToTopBtn.classList.remove('opacity-0', 'translate-y-10', 'pointer-events-none');
-                backToTopBtn.classList.add('opacity-100', 'translate-y-0');
-            } else {
-                backToTopBtn.classList.add('opacity-0', 'translate-y-10', 'pointer-events-none');
-                backToTopBtn.classList.remove('opacity-100', 'translate-y-0');
+            if (!isScrolling) {
+                window.requestAnimationFrame(() => {
+                    if (window.scrollY > 300) {
+                        backToTopBtn.classList.remove('opacity-0', 'translate-y-10', 'pointer-events-none');
+                        backToTopBtn.classList.add('opacity-100', 'translate-y-0');
+                    } else {
+                        backToTopBtn.classList.add('opacity-0', 'translate-y-10', 'pointer-events-none');
+                        backToTopBtn.classList.remove('opacity-100', 'translate-y-0');
+                    }
+                    isScrolling = false;
+                });
+                isScrolling = true;
             }
-        });
+        }, { passive: true });
 
         backToTopBtn.addEventListener('click', () => {
             window.scrollTo({

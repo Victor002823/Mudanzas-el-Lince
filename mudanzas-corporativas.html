@@ -3,9 +3,10 @@
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfMZg.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/materialsymbolsoutlined/v336/kJF1BvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oDMzByHX9rA6RzaxHMPdY43zj-jCxv3fzvRNU22ZXGJpEpjC_1v-p_4MrImHCIJIZrDCvHOem.ttf" as="font" type="font/ttf" crossorigin>
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"></noscript>
     <link rel="stylesheet" href="./assets/style.min.css" media="print" onload="this.media='all'">
@@ -13,16 +14,32 @@
 
     <style>
         :root { --surface: #faf8ff; --primary: #00236e; }
-        body { background-color: #faf8ff; margin: 0; font-family: system-ui, -apple-system, sans-serif; }
-        header { background-color: #ffffff; min-height: 80px; }
-        .h-[600px] { height: 600px; }
-        .h-[400px] { height: 400px; }
+        body { background-color: #faf8ff; margin: 0; font-family: system-ui, -apple-system, sans-serif; min-height: 100vh; }
+        header { background-color: #ffffff; min-height: 80px; position: sticky; top: 0; z-index: 50; border-bottom: 1px solid #e5e7eb; }
+        .min-h-\[600px\] { min-height: 600px; }
+        .min-h-\[400px\] { min-height: 400px; }
+        .h-\[600px\] { height: 600px; }
+        .h-\[48px\] { height: 48px; }
+        .w-3\/4 { width: 75%; }
         .relative { position: relative; }
         .max-w-7xl { max-width: 80rem; margin-left: auto; margin-right: auto; }
         .flex { display: flex; }
+        .flex-col { flex-direction: column; }
         .items-center { align-items: center; }
         .justify-between { justify-content: space-between; }
+        .hidden { display: none !important; }
+        .bg-primary { background-color: #00236e; }
+        .text-white { color: #ffffff; }
+        .rounded-lg { border-radius: 0.5rem; }
+        @media (min-width: 768px) {
+            .md\:flex { display: flex !important; }
+            .md\:hidden { display: none !important; }
+            .md\:block { display: block !important; }
+        }
     </style>
+    
+        
+        
 
     <title>Mudanzas Corporativas y de Oficinas | Logística Empresarial | Fletes y Mudanzas El Lince</title>
     <meta name="description" content="Especialistas en mudanzas corporativas y traslados de oficinas en CDMX. Logística eficiente para minimizar el tiempo de inactividad de su empresa."/>
@@ -79,8 +96,7 @@
       "description": "Servicio especializado en el traslado de activos empresariales, oficinas y corporativos."
     }
     </script>
-    <link rel="preload" href="https://fonts.gstatic.com/s/materialsymbolsoutlined/v336/kJF1BvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oDMzByHX9rA6RzaxHMPdY43zj-jCxv3fzvRNU22ZXGJpEpjC_1v-p_4MrImHCIJIZrDCvHOem.ttf" as="font" type="font/ttf" crossorigin>
-</head>
+    </head>
 <body class="bg-surface font-body-md text-on-surface antialiased">
 
 <header class="bg-white dark:bg-slate-900 border-b border-gray-200 dark:border-gray-800 sticky top-0 z-50">

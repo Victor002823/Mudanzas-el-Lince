@@ -16,13 +16,14 @@
 
 .company-logo {
     height: 48px !important;
-    width: 160px !important; /* Fixed width to match attributes and prevent shift */
+    width: auto !important;
+    aspect-ratio: 160/56;
     object-fit: contain;
 }
 
 @media (min-width: 768px) {
     .company-logo {
         height: 56px !important;
-        width: 186px !important; /* Scaled width for 56px height */
+        width: auto !important;
     }
 }

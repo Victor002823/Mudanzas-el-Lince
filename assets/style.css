@@ -942,10 +942,6 @@ input:where([type='file']):focus {
   height: 48px;
 }
 
-.h-\[600px\] {
-  height: 600px;
-}
-
 .h-auto {
   height: auto;
 }
@@ -1968,8 +1964,8 @@ input:where([type='file']):focus {
 
 .company-logo {
   height: 48px !important;
-  width: 160px !important;
-  /* Fixed width to match attributes and prevent shift */
+  width: auto !important;
+  aspect-ratio: 160/56;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -1977,8 +1973,7 @@ input:where([type='file']):focus {
 @media (min-width: 768px) {
   .company-logo {
     height: 56px !important;
-    width: 186px !important;
-    /* Scaled width for 56px height */
+    width: auto !important;
   }
 }
 
