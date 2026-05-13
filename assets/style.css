@@ -1858,6 +1858,89 @@ input:where([type='file']):focus {
   fill: white;
 }
 
+/* Blog UX Optimizations */
+
+.prose-content {
+  max-width: 720px;
+  margin: 0 auto;
+  line-height: 1.8;
+  color: #374151;
+}
+
+.prose-content h2 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #111827;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose-content p {
+  margin-bottom: 1.5rem;
+}
+
+.prose-content ul {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+  list-style-type: disc;
+}
+
+.prose-content li {
+  margin-bottom: 0.5rem;
+}
+
+/* Reading Progress Bar */
+
+#progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background: linear-gradient(to right, #1e3a8a, #3b82f6);
+  z-index: 1001;
+  width: 0%;
+  transition: width 0.1s ease;
+}
+
+/* Blog Card Hover */
+
+.blog-card {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.blog-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.blog-card img {
+  transition: transform 0.6s ease;
+}
+
+.blog-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Breadcrumbs */
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 2rem;
+}
+
+.breadcrumb a {
+  color: #1e3a8a;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
 /* AI Retrieval Optimization: Clear sections */
 
 .ai-chunk {
