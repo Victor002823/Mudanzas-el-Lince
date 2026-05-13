@@ -152,7 +152,7 @@ const articles = [
     }
 ];
 
-const template = (article, related) => `<!DOCTYPE html>
+const articleTemplate = (article, related) => `<!DOCTYPE html>
 <html class="light" lang="es">
 <head>
     <meta charset="utf-8"/>
@@ -181,7 +181,6 @@ const template = (article, related) => `<!DOCTYPE html>
         </nav>
     </div>
 </header>
-
 <main class="py-12 px-8">
     <div class="max-w-4xl mx-auto">
         <nav class="breadcrumb">
@@ -191,7 +190,6 @@ const template = (article, related) => `<!DOCTYPE html>
             <span class="material-symbols-outlined text-sm">chevron_right</span>
             <span class="text-gray-400">${article.category}</span>
         </nav>
-
         <header class="mb-12">
             <div class="flex items-center gap-4 mb-6">
                 <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">${article.category}</span>
@@ -202,11 +200,9 @@ const template = (article, related) => `<!DOCTYPE html>
             <h1 class="text-4xl md:text-5xl font-extrabold mb-8 leading-tight">${article.title}</h1>
             <img src="/assets/${article.image}" alt="${article.title}" class="w-full h-[400px] object-cover rounded-3xl shadow-2xl mb-12" />
         </header>
-
         <div class="prose-content ai-chunk">
             ${article.content}
         </div>
-
         <div class="mt-16 p-8 bg-primary/5 rounded-3xl border border-primary/10 flex flex-col md:flex-row items-center gap-8">
             <div class="flex-grow">
                 <h2 class="text-2xl font-bold mb-2">¿Te fue útil esta información?</h2>
@@ -214,7 +210,6 @@ const template = (article, related) => `<!DOCTYPE html>
             </div>
             <a href="/contacto" class="bg-primary text-white px-8 py-4 rounded-full font-bold hover:shadow-xl transition-all whitespace-nowrap">Solicitar Cotización Gratis</a>
         </div>
-
         <section class="mt-20">
             <h3 class="text-2xl font-bold mb-8">Artículos Relacionados</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -229,15 +224,12 @@ const template = (article, related) => `<!DOCTYPE html>
         </section>
     </div>
 </main>
-
 <footer class="bg-gray-900 text-white py-16 px-8 mt-12">
     <div class="max-w-7xl mx-auto text-center text-gray-400">
         <p>&copy; 2024 Fletes y Mudanzas El Lince. Profesionales en traslados.</p>
     </div>
 </footer>
-
 <script>
-    // Reading progress bar
     window.onscroll = function() {
         let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
         let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -248,16 +240,7 @@ const template = (article, related) => `<!DOCTYPE html>
 </body>
 </html>`;
 
-articles.forEach((article, index) => {
-    // Get 2 related articles (different from current)
-    const related = articles.filter((_, i) => i !== index).slice(0, 2);
-    fs.writeFileSync(path.join(__dirname, 'blog', article.slug + '.html'), template(article, related), 'utf8');
-});
-
-// Update blog/index.html with UX classes
-let indexArticles = '';
-articles.forEach(article => {
-    indexArticles += `
+const cardTemplate = (article) => `
     <article class="blog-card bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden flex flex-col h-full">
         <div class="overflow-hidden h-56">
             <img src="/assets/${article.image}" alt="${article.title}" class="w-full h-full object-cover" />
@@ -280,26 +263,26 @@ articles.forEach(article => {
             </div>
         </div>
     </article>`;
+
+// Generate individual articles
+articles.forEach((article, index) => {
+    const related = articles.filter((_, i) => i !== index).slice(0, 2);
+    fs.writeFileSync(path.join(__dirname, 'blog', article.slug + '.html'), articleTemplate(article, related), 'utf8');
 });
 
-let blogIndexContent = fs.readFileSync(path.join(__dirname, 'blog', 'index.html'), 'utf8');
+// Update blog/index.html
+const indexFile = path.join(__dirname, 'blog', 'index.html');
+let indexContent = fs.readFileSync(indexFile, 'utf8');
+const cardsHtml = articles.map(cardTemplate).join('\n');
 
-// Replace grid with new cards
-const gridSearch = /<div class="grid grid-cols-1 md:grid-cols-3 gap-[^"]+">([\s\S]*?)<\/div>/;
-blogIndexContent = blogIndexContent.replace(gridSearch, `<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">\n${indexArticles}\n        </div>`);
+const placeholder = '<!-- BLOG_CARDS_HERE -->';
+if (indexContent.includes(placeholder)) {
+    indexContent = indexContent.replace(placeholder, cardsHtml);
+} else {
+    // Fallback if placeholder is missing (clean up grid)
+    const gridRegex = /<div id="blog-grid"[^>]*>([\s\S]*?)<\/div>/;
+    indexContent = indexContent.replace(gridRegex, `<div id="blog-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">\n${cardsHtml}\n        </div>`);
+}
 
-// Add a search/intro section to blog index
-const headerSearch = /<header class="mb-16">([\s\S]*?)<\/header>/;
-const newBlogHeader = `
-        <header class="mb-16 text-center">
-            <h1 class="text-5xl font-extrabold mb-6">Blog El Lince</h1>
-            <p class="text-xl text-gray-600 max-w-2xl mx-auto mb-10">Guías profesionales, consejos de empaque y todo lo que necesitas para una mudanza exitosa en México.</p>
-            <div class="flex max-w-md mx-auto relative">
-                <input type="text" placeholder="Buscar guías o consejos..." class="w-full px-6 py-4 rounded-full border border-gray-200 focus:ring-2 focus:ring-primary focus:outline-none pr-12 shadow-sm">
-                <span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-gray-400">search</span>
-            </div>
-        </header>`;
-blogIndexContent = blogIndexContent.replace(headerSearch, newBlogHeader);
-
-fs.writeFileSync(path.join(__dirname, 'blog', 'index.html'), blogIndexContent, 'utf8');
-console.log('Blog UX Improvements Applied');
+fs.writeFileSync(indexFile, indexContent, 'utf8');
+console.log('Blog generated cleanly without duplicates.');
