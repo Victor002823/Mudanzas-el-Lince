@@ -814,6 +814,10 @@ input:where([type='file']):focus {
   margin-right: auto;
 }
 
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
 .mb-4 {
   margin-bottom: 1rem;
 }
@@ -1715,6 +1719,10 @@ input:where([type='file']):focus {
   opacity: 0.8;
 }
 
+.opacity-90 {
+  opacity: 0.9;
+}
+
 .mix-blend-multiply {
   mix-blend-mode: multiply;
 }
@@ -2006,6 +2014,10 @@ input:where([type='file']):focus {
 
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .md\:flex-row {

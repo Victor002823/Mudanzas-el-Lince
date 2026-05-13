@@ -14,11 +14,17 @@ RewriteRule ^(.*)$ $1.html [L]
 # 3. Redirigir index.html a la raíz /
 RewriteRule ^index$ / [L,R=301]
 
-# 4. Manejo de URLs limpias para la carpeta servicios (ej. /fletes -> servicios/fletes.html)
+# 4. Manejo de URLs limpias para la carpeta servicios
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{DOCUMENT_ROOT}/servicios/$1.html -f
 RewriteRule ^([^/]+)$ servicios/$1.html [L]
+
+# 5. Manejo de URLs limpias para el Blog
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{DOCUMENT_ROOT}/blog/$1.html -f
+RewriteRule ^blog/([^/]+)$ blog/$1.html [L]
 
 # GZIP Compression
 <IfModule mod_deflate.c>
