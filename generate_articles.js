@@ -4,13 +4,13 @@ const path = require('path');
 const articles = [
     {
         slug: 'cuanto-cuesta-una-mudanza-en-cdmx',
-        title: '¿Cuánto cuesta una mudanza en CDMX? [Guía de Precios 2024]',
+        title: '¿Cuánto cuesta una mudanza en CDMX? [Guía de Precios 2026]',
         image: 'blog_mudanzas_cdmx.png',
         category: 'Precios',
         readTime: '6 min',
         description: 'Descubre cuánto cuesta una mudanza en CDMX. Analizamos precios por zonas como Polanco, Roma y Santa Fe.',
         content: `
-            <p>Planear una mudanza en la <strong>Ciudad de México (CDMX)</strong> requiere un balance entre presupuesto y logística. En 2024, los costos han evolucionado debido al incremento en combustibles y la demanda de servicios especializados.</p>
+            <p>Planear una mudanza en la <strong>Ciudad de México (CDMX)</strong> requiere un balance entre presupuesto y logística. En 2026, los costos han evolucionado debido al incremento en combustibles y la demanda de servicios especializados.</p>
             <h2>Factores que influyen en el precio final</h2>
             <p>No existe una tarifa única, ya que cada traslado es un proyecto logístico independiente. Sin embargo, los siguientes factores son determinantes:</p>
             <ul>
@@ -248,7 +248,7 @@ const articleTemplate = (article, related) => `<!DOCTYPE html>
 </main>
 <footer class="bg-gray-900 text-white py-16 px-8 mt-12">
     <div class="max-w-7xl mx-auto text-center text-gray-400">
-        <p>&copy; 2024 Fletes y Mudanzas El Lince. Profesionales en traslados.</p>
+        <p>&copy; 2026 Fletes y Mudanzas El Lince. Profesionales en traslados.</p>
     </div>
 </footer>
 <script>

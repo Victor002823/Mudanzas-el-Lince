@@ -1853,37 +1853,6 @@ input:where([type='file']):focus {
   fill: white;
 }
 
-/* Blog UX Optimizations */
-
-.prose-content {
-  max-width: 720px;
-  margin: 0 auto;
-  line-height: 1.8;
-  color: #374151;
-}
-
-.prose-content h2 {
-  font-size: 1.875rem;
-  font-weight: 700;
-  color: #111827;
-  margin-top: 2.5rem;
-  margin-bottom: 1.25rem;
-}
-
-.prose-content p {
-  margin-bottom: 1.5rem;
-}
-
-.prose-content ul {
-  margin-bottom: 1.5rem;
-  padding-left: 1.5rem;
-  list-style-type: disc;
-}
-
-.prose-content li {
-  margin-bottom: 0.5rem;
-}
-
 /* Reading Progress Bar */
 
 #progress-bar {
@@ -1891,10 +1860,57 @@ input:where([type='file']):focus {
   top: 0;
   left: 0;
   height: 4px;
-  background: linear-gradient(to right, #1e3a8a, #3b82f6);
+  background: linear-gradient(to right, var(--primary), #3b82f6);
   z-index: 1001;
   width: 0%;
   transition: width 0.1s ease;
+}
+
+/* Typography & Spacing UX */
+
+.prose-content {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.125rem;
+  line-height: 1.85;
+  color: #334155;
+  /* Slate 700 */
+}
+
+.prose-content h2 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-top: 4rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.025em;
+}
+
+.prose-content h3 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-top: 3rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose-content p {
+  margin-bottom: 2rem;
+}
+
+.prose-content strong {
+  color: #0f172a;
+  font-weight: 700;
+}
+
+.prose-content ul, .prose-content ol {
+  margin-bottom: 2rem;
+  padding-left: 1.75rem;
+}
+
+.prose-content li {
+  margin-bottom: 1rem;
+  position: relative;
 }
 
 /* Blog Card Hover */
