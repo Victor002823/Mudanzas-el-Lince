@@ -1,7 +1,12 @@
 <?php
 /**
  * Script para procesar el formulario de contacto de Fletes y Mudanzas El Lince
+ * Incluye medidas anti-spam avanzadas.
  */
+
+// Desactivar visualización de errores para no romper el JSON
+error_reporting(0);
+ini_set('display_errors', 0);
 
 // Establecer cabeceras para respuesta JSON
 header('Content-Type: application/json');
@@ -13,19 +18,41 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit;
 }
 
-// Honeypot para evitar spam (campo oculto que los humanos no llenan)
-if (!empty($_POST['website'])) {
-    echo json_encode(['success' => true, 'message' => '¡Mensaje enviado con éxito!']); // Engañamos al bot
+// 1. Honeypot Check
+// Si este campo está lleno, es un bot.
+if (!empty($_POST['honeypot_field'])) {
+    // Engañamos al bot respondiendo éxito pero sin hacer nada
+    echo json_encode(['success' => true, 'message' => '¡Gracias! Tu mensaje ha sido enviado correctamente.']);
     exit;
 }
 
-// Obtener y sanitizar datos
-$nombre = filter_var($_POST['nombre'] ?? '', FILTER_SANITIZE_STRING);
+// 2. Timestamp Check (Min 3 seconds)
+// Los humanos tardan más de 3 segundos en llenar el formulario.
+$current_time = time();
+$form_timestamp = isset($_POST['form_timestamp']) ? (int)$_POST['form_timestamp'] : 0;
+
+// Si el timestamp es 0 o no existe, podría ser un bot o un error de carga.
+// Para ser estrictos en seguridad, lo bloqueamos.
+if ($form_timestamp === 0) {
+    http_response_code(400);
+    echo json_encode(['success' => false, 'message' => 'Error de validación de seguridad (TS0).']);
+    exit;
+}
+
+if (($current_time - $form_timestamp) < 3) {
+    // Es muy probable que sea un bot enviando instantáneamente
+    http_response_code(400);
+    echo json_encode(['success' => false, 'message' => 'Envío demasiado rápido. Por favor, espera un momento.']);
+    exit;
+}
+
+// 3. Obtener y sanitizar datos (FILTER_SANITIZE_STRING está obsoleto en PHP 8.1+)
+$nombre = htmlspecialchars(trim($_POST['nombre'] ?? ''), ENT_QUOTES, 'UTF-8');
 $email = filter_var($_POST['email'] ?? '', FILTER_SANITIZE_EMAIL);
-$telefono = filter_var($_POST['telefono'] ?? '', FILTER_SANITIZE_STRING);
-$origen = filter_var($_POST['origen'] ?? '', FILTER_SANITIZE_STRING);
-$destino = filter_var($_POST['destino'] ?? '', FILTER_SANITIZE_STRING);
-$mensaje = filter_var($_POST['mensaje'] ?? '', FILTER_SANITIZE_STRING);
+$telefono = htmlspecialchars(trim($_POST['telefono'] ?? ''), ENT_QUOTES, 'UTF-8');
+$origen = htmlspecialchars(trim($_POST['origen'] ?? ''), ENT_QUOTES, 'UTF-8');
+$destino = htmlspecialchars(trim($_POST['destino'] ?? ''), ENT_QUOTES, 'UTF-8');
+$mensaje = htmlspecialchars(trim($_POST['mensaje'] ?? ''), ENT_QUOTES, 'UTF-8');
 
 // Validación básica
 if (empty($nombre) || empty($email) || empty($mensaje)) {
@@ -40,8 +67,8 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     exit;
 }
 
-// Configuración del correo
-$to = "mudanzasellince@gmail.com"; // Email de destino (ajustar si es necesario)
+// 4. Configuración del correo
+$to = "mudanzasellince@gmail.com";
 $subject = "Nueva Solicitud de Cotización: $nombre";
 
 // Cuerpo del mensaje
@@ -69,6 +96,6 @@ if (mail($to, $subject, $email_content, $headers)) {
     echo json_encode(['success' => true, 'message' => '¡Gracias! Tu mensaje ha sido enviado correctamente. Nos pondremos en contacto contigo pronto.']);
 } else {
     http_response_code(500);
-    echo json_encode(['success' => false, 'message' => 'Lo sentimos, hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo o contáctanos por WhatsApp.']);
+    echo json_encode(['success' => false, 'message' => 'Lo sentimos, hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo.']);
 }
 ?>
