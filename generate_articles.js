@@ -259,6 +259,7 @@ const articleTemplate = (article, related) => `<!DOCTYPE html>
         document.getElementById("progress-bar").style.width = scrolled + "%";
     };
 </script>
+<script defer src="/assets/app.min.js"></script>
 </body>
 </html>`;
 
