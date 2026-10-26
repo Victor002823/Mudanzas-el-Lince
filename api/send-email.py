@@ -38,10 +38,10 @@ class handler(BaseHTTPRequestHandler):
 
         # 📩 Estructura del correo HTML para Brevo
         html_content = f"""
-            <h2>Nueva solicitud de cotización</h2>
+            <h2>Nueva solicitud de cotizacion</h2>
             <p><strong>Nombre:</strong> {nombre}</p>
             <p><strong>Email:</strong> {email}</p>
-            <p><strong>Teléfono:</strong> {telefono}</p>
+            <p><strong>Telefono:</strong> {telefono}</p>
             <p><strong>Origen:</strong> {origen}</p>
             <p><strong>Destino:</strong> {destino}</p>
             <p><strong>Mensaje:</strong><br>{mensaje.replace('\n', '<br>')}</p>
@@ -58,7 +58,7 @@ class handler(BaseHTTPRequestHandler):
                     "name": "Sistemas Lince"
                 }
             ],
-            "subject": f"Nueva cotización web - {nombre}",
+            "subject": f"Nueva cotizacion web - {nombre}",
             "htmlContent": html_content,
             "replyTo": {
                 "email": email,
@@ -102,4 +102,4 @@ class handler(BaseHTTPRequestHandler):
         self.send_response(405)
         self.send_header('Content-type', 'application/json')
         self.end_headers()
-        self.wfile.write(json.dumps({'success': False, 'message': 'Método no permitido'}).encode('utf-8'))
+        self.wfile.write(json.dumps({'success': False, 'message': 'Metodo no permitido'}).encode('utf-8'))
