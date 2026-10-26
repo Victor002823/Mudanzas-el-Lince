@@ -38,7 +38,7 @@ class handler(BaseHTTPRequestHandler):
 
         # 📩 Estructura del correo HTML para Brevo
         html_content = f"""
-            <h2>Nueva solicitud de cotización (Prueba Python Vercel)</h2>
+            <h2>Nueva solicitud de cotización</h2>
             <p><strong>Nombre:</strong> {nombre}</p>
             <p><strong>Email:</strong> {email}</p>
             <p><strong>Teléfono:</strong> {telefono}</p>
@@ -49,16 +49,16 @@ class handler(BaseHTTPRequestHandler):
 
         payload = {
             "sender": {
-                "name": "Pruebas Lince",
-                "email": "prueba@api0028.qzz.io"
+                "name": "Fletes y Mudanzas El Lince",
+                "email": "cotizacion@mudanzasellince.com"
             },
             "to": [
                 {
-                    "email": "fletesymudanzasellince@gmail.com",
-                    "name": "Fletes y Mudanzas El Lince"
+                    "email": "sistemas@mudanzasellince.com",
+                    "name": "Sistemas Lince"
                 }
             ],
-            "subject": f"Nueva cotización (Prueba Python) - {nombre}",
+            "subject": f"Nueva cotización web - {nombre}",
             "htmlContent": html_content,
             "replyTo": {
                 "email": email,
@@ -97,7 +97,7 @@ class handler(BaseHTTPRequestHandler):
             self.send_header('Content-type', 'application/json')
             self.end_headers()
             self.wfile.write(json.dumps({'success': False, 'message': 'Error interno del servidor'}).encode('utf-8'))
-    
+
     def do_GET(self):
         self.send_response(405)
         self.send_header('Content-type', 'application/json')
